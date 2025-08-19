@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,7 +47,7 @@
 
     .header-content {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 60px;
       position: relative;
       z-index: 2;
@@ -55,7 +56,7 @@
     .photo-container {
       position: relative;
       width: 320px;
-      height: 360px;
+      height: 569px;
       flex-shrink: 0;
     }
 
@@ -81,7 +82,7 @@
       right: -15px;
       transition: transform 0.5s ease;
       box-shadow: var(--shadow);
-      object-position: top center;
+      object-position: center;
       background: #f5f5f5;
     }
 
@@ -97,7 +98,7 @@
       font-size: 3rem;
       font-weight: 800;
       padding: 10px 60px;
-      margin-bottom: 10px;
+      margin-bottom: 18px;
       line-height: 1;
       position: relative;
       display: inline-block;
@@ -119,7 +120,7 @@
       font-size: 1.8rem;
       font-weight: 600;
       color: var(--dark-gray);
-      margin-bottom: 30px;
+      margin-bottom: 38px;
     }
 
     .description {
@@ -531,6 +532,15 @@
         flex-direction: column;
         align-items: center;
       }
+
+      .photo-container {
+        width: 240px;
+        height: 426px;
+      }
+
+      .header-content {
+        align-items: center;
+      }
     }
 
     /* Decorative Elements */
@@ -559,6 +569,32 @@
       width: 150px;
       height: 150px;
       animation: rotate 25s linear infinite reverse;
+    }
+
+    .circle-3 {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .circle-1 {
+        top: 3%;
+        right: 5%;
+      }
+
+      .circle-3 {
+        display: block;
+        bottom: 7%;
+        right: 5%;
+        width: 150px;
+        height: 150px;
+        animation: rotate 20s linear infinite;
+
+      }
+
+      .circle-2 {
+        bottom: 38%;
+      }
+
     }
 
     @keyframes rotate {
@@ -609,6 +645,7 @@
   <header>
     <div class="decoration circle circle-1"></div>
     <div class="decoration circle circle-2"></div>
+    <div class="decoration circle circle-3"></div>
     <div class="decoration dot-grid dot-grid-1"></div>
     <div class="decoration dot-grid dot-grid-2"></div>
 
@@ -616,7 +653,7 @@
       <div class="header-content">
         <div class="photo-container ">
           <div class="photo-backdrop floating"></div>
-          <img src="photo1.webp" alt="Фото разработчика" class="photo floating2">
+          <img src="photo5.gif" alt="Фото разработчика" class="photo floating2">
         </div>
         <div class="header-info">
           <h1 class="name">Шамрило Кирилл</h1>
@@ -730,8 +767,8 @@
         <div class="work-item" data-video="7CSNjmzxVOY">
           <img src="https://img.youtube.com/vi/7CSNjmzxVOY/maxresdefault.jpg" alt="Работа 4" class="video-thumbnail">
           <div class="work-overlay">
-            <h3 class="work-title">Анимация продукта</h3>
-            <p class="work-category">After Effects</p>
+            <h3 class="work-title">Анимация логотипа</h3>
+            <p class="work-category">After Effects / Lottie</p>
           </div>
           <div class="play-icon">
             <i class="fas fa-play"></i>
@@ -744,8 +781,8 @@
         <div class="work-item" data-video="0NuEsapcVqU">
           <img src="https://img.youtube.com/vi/0NuEsapcVqU/hqdefault.jpg" alt=" Работа 1" class="video-thumbnail">
           <div class="work-overlay">
-            <h3 class="work-title">Промо-ролик</h3>
-            <p class="work-category">After Effects</p>
+            <h3 class="work-title">3D Анимация продукта</h3>
+            <p class="work-category">Blender / After Effects</p>
           </div>
           <div class="play-icon">
             <i class="fas fa-play"></i>
@@ -758,8 +795,8 @@
         <div class="work-item" data-video="BaIiglREd4s">
           <img src="https://img.youtube.com/vi/BaIiglREd4s/hqdefault.jpg" alt="Работа 3" class="video-thumbnail">
           <div class="work-overlay">
-            <h3 class="work-title">Анимация логотипа</h3>
-            <p class="work-category">After Effects</p>
+            <h3 class="work-title">Интерактивный веб-баннер</h3>
+            <p class="work-category">GSAP / Canvas</p>
           </div>
           <div class="play-icon">
             <i class="fas fa-play"></i>
@@ -771,8 +808,8 @@
         <div class="work-item" data-video="OxKCdi6IiPA">
           <img src="https://img.youtube.com/vi/OxKCdi6IiPA/hqdefault.jpg" alt="Работа 2" class="video-thumbnail">
           <div class="work-overlay">
-            <h3 class="work-title">Промо-ролик</h3>
-            <p class="work-category">After Effects</p>
+            <h3 class="work-title">UI Анимация для приложения</h3>
+            <p class="work-category">Figma / Principle</p>
           </div>
           <div class="play-icon">
             <i class="fas fa-play"></i>
@@ -784,7 +821,7 @@
           <img src="https://img.youtube.com/vi/CUKFwSacEC4/maxresdefault.jpg" alt="Работа 5" class="video-thumbnail">
           <div class="work-overlay">
             <h3 class="work-title">Промо-ролик для стартапа</h3>
-            <p class="work-category">After Effects</p>
+            <p class="work-category">Premiere Pro / Cinema 4D</p>
           </div>
           <div class="play-icon">
             <i class="fas fa-play"></i>
@@ -796,7 +833,7 @@
           <img src="https://img.youtube.com/vi/NpeIUpzbWl0/maxresdefault.jpg" alt="Работа 6" class="video-thumbnail">
           <div class="work-overlay">
             <h3 class="work-title">Анимированная инфографика</h3>
-            <p class="work-category">After Effects</p>
+            <p class="work-category">After Effects / Illustrator</p>
           </div>
           <div class="play-icon">
             <i class="fas fa-play"></i>
